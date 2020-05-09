@@ -25,7 +25,7 @@
       - nodejs
       - npm
       - perl
-      - php
+      - php7.4-cli
       - pkg-config
       - python3
       - ripgrep

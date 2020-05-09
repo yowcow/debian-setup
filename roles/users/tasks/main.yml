@@ -34,4 +34,5 @@
     name: "{{ item }}"
     groups:
       - docker
+      - sudo
   with_items: "{{ developers }}"

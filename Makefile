@@ -1,4 +1,5 @@
 HOST := $(shell hostname)
+
 ifeq ($(HOST),dev03-bco)
   GROUP := production
 else ifeq ($(HOST),debian-vagrant)

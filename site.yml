@@ -22,8 +22,8 @@
   hosts: production
   become: yes
   roles:
-    #- common
-    #- users
-    #- ufw
+    - common
+    - users
+    - ufw
     - nginx
-      #- mysqld
+    - mysqld

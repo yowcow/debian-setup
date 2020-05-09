@@ -1,0 +1,6 @@
+- name: install apt packages for mysql client
+  apt:
+    name:
+      - mysql-client
+      - mysql-common
+      - libmysqlclient-dev

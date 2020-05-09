@@ -40,6 +40,7 @@
       - zip
       - zsh
 
+- include: mysql.yml
 - include: neovim.yml
 - include: travis.yml
 - include: sysstat.yml

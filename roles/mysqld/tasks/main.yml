@@ -2,4 +2,20 @@
 - name: install apt packages for mysqld
   apt:
     name:
-      - default-mysql-server
+      - mysql-server
+
+- name: enable mysqld service
+  systemd:
+    name: mysql
+    enabled: yes
+
+- name: start mysqld service
+  systemd:
+    name: mysql
+    state: started
+
+- name: install server.cnf
+  copy:
+    src: server.cnf
+    dest: /etc/mysql/conf.d/server.cnf
+  notify: mysql_restart

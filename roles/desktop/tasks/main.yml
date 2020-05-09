@@ -1,0 +1,8 @@
+---
+- name: install apt packages for desktop
+  apt:
+    name:
+      - fonts-firacode
+      - fonts-hack
+      - fonts-noto
+      - ibus-mozc

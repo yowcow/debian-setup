@@ -9,6 +9,7 @@
     - users
     - ufw
     - docker
+    - desktop
 
 - name: apply configuration to development
   hosts: development
@@ -20,7 +21,6 @@
     - users
     - ufw
     - docker
-    - nginx
 
 - name: apply configuration to production
   hosts: production

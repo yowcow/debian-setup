@@ -4,6 +4,7 @@
       - apt-file
       - autoconf
       - automake
+      - awscli
       - bison
       - build-essential
       - ca-certificates

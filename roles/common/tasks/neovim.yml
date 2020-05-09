@@ -1,0 +1,16 @@
+- name: install apt packages for neovim
+  apt:
+    name:
+      - lua-nvim
+      - neovim
+      - npm
+      - python3
+      - python3-pynvim
+      - ruby-neovim
+
+- name: install npm packages for neovim
+  npm:
+    name: neovim
+    global: yes
+    production: yes
+    state: latest

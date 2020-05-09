@@ -1,0 +1,29 @@
+---
+- name: apply configuration to laptop
+  hosts: laptop
+  become: yes
+  roles:
+    - common
+    - users
+    - ufw
+    - docker
+
+- name: apply configuration to development
+  hosts: development
+  become: yes
+  roles:
+    - common
+    - users
+    - ufw
+    - docker
+    - nginx
+
+- name: apply configuration to production
+  hosts: production
+  become: yes
+  roles:
+    #- common
+    #- users
+    #- ufw
+    - nginx
+      #- mysqld

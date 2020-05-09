@@ -1,0 +1,17 @@
+---
+developers:
+  - vagrant
+
+ufw:
+  default: allow
+  rules:
+    - to_port: 22
+      rule: allow
+    - to_port: 80
+      rule: allow
+    - to_port: 443
+      rule: allow
+    - to_port: 2222
+      rule: allow
+    - to_port: 6697
+      rule: allow

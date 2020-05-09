@@ -1,0 +1,45 @@
+- name: install apt packages
+  apt:
+    name:
+      - apt-file
+      - autoconf
+      - automake
+      - bison
+      - build-essential
+      - ca-certificates
+      - checkinstall
+      - clang
+      - cmake
+      - composer
+      - cronolog
+      - curl
+      - finger
+      - flex
+      - g++
+      - gawk
+      - git
+      - golang
+      - htop
+      - jq
+      - netbase
+      - nodejs
+      - npm
+      - perl
+      - php
+      - pkg-config
+      - python3
+      - ripgrep
+      - ruby
+      - tmux
+      - traceroute
+      - tree
+      - tzdata
+      - universal-ctags
+      - valgrind
+      - weechat
+      - zip
+      - zsh
+
+- include: neovim.yml
+- include: travis.yml
+- include: sysstat.yml

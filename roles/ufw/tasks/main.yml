@@ -1,0 +1,15 @@
+- name: install apt packages for ufw
+  apt:
+    name:
+      - ufw
+
+- name: enable UFW with default policy
+  ufw:
+    state: enabled
+    default: "{{ ufw.default }}"
+
+- name: apply UFW rules
+  with_items: "{{ ufw.rules }}"
+  ufw:
+    to_port: "{{ item.to_port }}"
+    rule: "{{ item.rule }}"

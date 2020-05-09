@@ -1,0 +1,5 @@
+---
+- name: install apt packages for mysqld
+  apt:
+    name:
+      - default-mysql-server

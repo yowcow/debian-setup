@@ -1,0 +1,35 @@
+- name: install apt packages for universal-ctags
+  apt:
+    name:
+      - gcc
+      - make
+      - pkg-config
+      - autoconf
+      - automake
+      - python3-docutils
+      - libseccomp-dev
+      - libjansson-dev
+      - libyaml-dev
+      - libxml2-dev
+
+- name: build and install universal-ctags
+  vars:
+    src: /usr/local/src/universal-ctags
+  block:
+    - git:
+        repo: https://github.com/universal-ctags/ctags.git
+        dest: "{{ src }}"
+    - shell:
+        chdir: "{{ src }}"
+        cmd: ./autogen.sh
+        creates: "{{ src }}/configure"
+    - shell:
+        chdir: "{{ src }}"
+        cmd: ./configure --prefix=/usr/local
+        creates: "{{ src }}/Makefile"
+    - make:
+        chdir: "{{ src }}"
+        target: all
+    - make:
+        chdir: "{{ src }}"
+        target: install

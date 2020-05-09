@@ -1,0 +1,7 @@
+---
+release: testing
+developers:
+  - yowcow
+ufw:
+  default: reject
+  rules: []

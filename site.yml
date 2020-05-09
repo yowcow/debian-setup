@@ -4,6 +4,7 @@
   become: yes
   gather_facts: no
   roles:
+    - apt
     - common
     - users
     - ufw
@@ -14,6 +15,7 @@
   become: yes
   gather_facts: no
   roles:
+    - apt
     - common
     - users
     - ufw
@@ -25,6 +27,7 @@
   become: yes
   gather_facts: no
   roles:
+    - apt
     - common
     - users
     - ufw

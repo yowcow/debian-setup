@@ -27,7 +27,7 @@
 - name: add group docker
   group:
     name: docker
-    gid: 112
+    gid: 2002
 
 - name: add develoers to docker group
   user:

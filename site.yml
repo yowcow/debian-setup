@@ -2,6 +2,13 @@
 - name: apply configuration to laptop
   hosts: laptop
   become: yes
+  gather_facts: no
+  vars:
+    developers:
+      - yowcow
+    ufw:
+      default: reject
+      rules: []
   roles:
     - common
     - users
@@ -11,6 +18,23 @@
 - name: apply configuration to development
   hosts: development
   become: yes
+  gather_facts: no
+  vars:
+    developers:
+      - vagrant
+    ufw:
+      default: allow
+      rules:
+        - to_port: 22
+          rule: allow
+        - to_port: 80
+          rule: allow
+        - to_port: 443
+          rule: allow
+        - to_port: 2222
+          rule: allow
+        - to_port: 6697
+          rule: allow
   roles:
     - common
     - users
@@ -21,9 +45,26 @@
 - name: apply configuration to production
   hosts: production
   become: yes
+  gather_facts: no
+  vars:
+    developers: []
+    ufw:
+      default: reject
+      rules:
+        - to_port: 22
+          rule: allow
+        - to_port: 80
+          rule: allow
+        - to_port: 443
+          rule: allow
+        - to_port: 2222
+          rule: allow
+        - to_port: 6697
+          rule: allow
   roles:
     - common
     - users
     - ufw
     - nginx
     - mysqld
+    - znc

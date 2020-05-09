@@ -18,4 +18,7 @@ play: BOOK := site.yml
 play:
 	$(ANSIBLE_PLAYBOOK) $(BOOK)
 
+play-role:
+	$(ANSIBLE) $(GROUP) -m include_role -a name=$(ROLE)
+
 .PHONY: all play

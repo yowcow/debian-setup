@@ -14,9 +14,12 @@ ANSIBLE_PLAYBOOK := ansible-playbook -i hosts.$(GROUP) -K -e 'ansible_python_int
 all:
 	$(ANSIBLE) $(GROUP) -m ping
 
+ifneq ($(DRYRUN),)
+play: CHECK := --check
+endif
 play: BOOK := site.yml
 play:
-	$(ANSIBLE_PLAYBOOK) $(BOOK)
+	$(ANSIBLE_PLAYBOOK) $(BOOK) $(CHECK)
 
 play-role:
 	$(ANSIBLE) $(GROUP) -m include_role -a name=$(ROLE)

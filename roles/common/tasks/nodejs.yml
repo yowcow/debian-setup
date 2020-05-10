@@ -1,0 +1,6 @@
+- name: install apt packages for nodejs
+  apt:
+    name:
+      - node-typescript
+      - nodejs
+      - npm

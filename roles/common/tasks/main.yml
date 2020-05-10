@@ -1,3 +1,10 @@
+- name: set time zone
+  file:
+    src: /usr/share/zoneinfo/Asia/Tokyo
+    dest: /etc/localtime
+    state: link
+    force: yes
+
 - name: install apt packages
   apt:
     name:
@@ -26,7 +33,7 @@
       - nodejs
       - npm
       - perl
-      - php7.4-cli
+      - php-cli
       - pkg-config
       - python3
       - ripgrep

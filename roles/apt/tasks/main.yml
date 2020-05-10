@@ -2,4 +2,7 @@
   template:
     src: sources.list.j2
     dest: /etc/apt/sources.list
-  notify: update_apt_cache
+
+- name: update apt cache
+  apt:
+    update_cache: yes

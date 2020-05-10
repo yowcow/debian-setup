@@ -1,7 +1,9 @@
 ---
 release: testing
+
 developers:
   - vagrant
+
 ufw:
   default: allow
   rules:

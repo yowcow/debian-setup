@@ -12,7 +12,13 @@
       - libyaml-dev
       - libxml2-dev
 
+- name: check if ctags already installed
+  stat:
+    path: /usr/local/bin/ctags
+  register: stat_result
+
 - name: build and install universal-ctags
+  when: not stat_result.stat.exists
   vars:
     src: /usr/local/src/universal-ctags
   block:

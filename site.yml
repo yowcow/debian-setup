@@ -22,6 +22,7 @@
   gather_facts: no
   roles:
     - docker
+    - google-cloud
 
 - name: apply configuration to production
   hosts: production

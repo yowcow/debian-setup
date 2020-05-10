@@ -2,9 +2,11 @@
 - name: install apt packages for desktop
   apt:
     name:
+      - flatpak
       - fonts-firacode
       - fonts-hack
       - fonts-noto
       - ibus-mozc
+      - materia-gtk-theme
 
 - include: goph.yml

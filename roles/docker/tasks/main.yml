@@ -1,6 +1,8 @@
 - name: install docker.io
   apt:
-    name: docker.io
+    name:
+      - docker.io
+      - docker-compose
 
 - name: enable docker service
   systemd:

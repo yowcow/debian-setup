@@ -1,6 +1,8 @@
 ---
-release: stable
+release: bullseye
+
 developers: []
+
 ufw:
   default: reject
   rules:

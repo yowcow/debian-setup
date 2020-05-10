@@ -6,3 +6,5 @@
       - fonts-hack
       - fonts-noto
       - ibus-mozc
+
+- include: goph.yml

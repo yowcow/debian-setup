@@ -42,6 +42,7 @@
       - traceroute
       - tree
       - tzdata
+      - uuid-runtime
       - valgrind
       - weechat
       - zip

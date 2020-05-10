@@ -1,6 +1,6 @@
 ---
-- name: apply configuration to laptop
-  hosts: laptop
+- name: apply configuration to all nodes
+  hosts: all
   become: yes
   gather_facts: no
   roles:
@@ -8,6 +8,12 @@
     - common
     - users
     - ufw
+
+- name: apply configuration to laptop
+  hosts: laptop
+  become: yes
+  gather_facts: no
+  roles:
     - docker
 
 - name: apply configuration to development
@@ -15,22 +21,13 @@
   become: yes
   gather_facts: no
   roles:
-    - apt
-    - common
-    - users
-    - ufw
     - docker
-    - nginx
 
 - name: apply configuration to production
   hosts: production
   become: yes
   gather_facts: no
   roles:
-    - apt
-    - common
-    - users
-    - ufw
     - nginx
     - mysqld
     - znc

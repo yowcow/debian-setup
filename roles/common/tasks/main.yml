@@ -36,6 +36,7 @@
       - python3
       - ripgrep
       - ruby
+      - ruby-dev
       - tmux
       - traceroute
       - tree

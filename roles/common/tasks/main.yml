@@ -47,6 +47,11 @@
       - zip
       - zsh
 
+- name: install apt lib packages
+  apt:
+    name:
+      - libdb-dev
+
 - include: erlang.yml
 - include: mysql.yml
 - include: neovim.yml

@@ -32,6 +32,7 @@
       - netbase
       - perl
       - php-cli
+      - php-xml
       - pkg-config
       - python3
       - ripgrep

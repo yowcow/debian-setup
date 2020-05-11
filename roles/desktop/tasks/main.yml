@@ -2,6 +2,7 @@
 - name: install apt packages for desktop
   apt:
     name:
+      - firmware-linux-nonfree
       - flatpak
       - fonts-firacode
       - fonts-hack

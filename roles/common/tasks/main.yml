@@ -12,6 +12,7 @@
       - autoconf
       - automake
       - awscli
+      - bind9-dnsutils
       - bison
       - build-essential
       - ca-certificates

@@ -11,4 +11,3 @@
       - materia-gtk-theme
 
 - include: goph.yml
-- include: i3.yml

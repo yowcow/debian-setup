@@ -1,0 +1,5 @@
+---
+- name: install apt packages for i3
+  apt:
+    name:
+      - i3

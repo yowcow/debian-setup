@@ -1,0 +1,8 @@
+---
+- name: install apt packages for sway
+  apt:
+    name:
+      - sway
+      - swayidle
+      - swaylock
+      - wofi

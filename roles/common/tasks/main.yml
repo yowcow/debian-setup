@@ -45,6 +45,7 @@
       - tzdata
       - uuid-runtime
       - valgrind
+      - whois
       - weechat
       - zip
       - zsh

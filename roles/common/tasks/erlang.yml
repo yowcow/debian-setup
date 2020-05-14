@@ -3,6 +3,45 @@
     name:
       - erlang
 
+- name: check installed erlang revision
+  vars:
+    src: /usr/local/src/erlang
+  shell:
+    cmd: "cat {{ src }}/installed-revision || true"
+  register: installed_revision
+
+- name: build and install erlang
+  vars:
+    revision: OTP-23.0
+    src: /usr/local/src/erlang
+    prefix: /usr/local/erlang
+  when: installed_revision.stdout.find(revision) == -1
+  block:
+    - git:
+        repo: https://github.com/erlang/OTP.git
+        dest: "{{ src }}/{{ revision }}"
+        version: "{{ revision }}"
+    - shell:
+        chdir: "{{ src }}/{{ revision }}"
+        cmd: ./otp_build autoconf
+        creates: "{{ src }}/{{ revision }}/configure"
+    - shell:
+        chdir: "{{ src }}/{{ revision }}"
+        cmd: "./configure --prefix={{ prefix }}"
+        creates: "{{ src }}/{{ revision }}/Makefile"
+    - make:
+        chdir: "{{ src }}/{{ revision }}"
+        target: all
+    - file:
+        path: "{{ prefix }}"
+        state: absent
+    - make:
+        chdir: "{{ src }}/{{ revision }}"
+        target: install
+    - copy:
+        dest: "{{ src }}/installed-revision"
+        content: "{{ revision }}"
+
 - name: fetch and install rebar3
   get_url:
     url: https://s3.amazonaws.com/rebar3/rebar3

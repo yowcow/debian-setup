@@ -7,8 +7,8 @@
       - fonts-firacode
       - fonts-hack
       - fonts-noto
-      - ibus-mozc
       - materia-gtk-theme
 
 - include: goph.yml
+- include: mozc.yml
 - include: sway.yml

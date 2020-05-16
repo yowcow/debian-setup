@@ -2,6 +2,8 @@
 - name: install apt packages for i3
   apt:
     name:
+      - blueman
+      - bluez
       - i3
       - i3-wm
       - light
@@ -16,25 +18,9 @@
     src: 40-libinput.conf
     dest: /etc/X11/xorg.conf.d/40-libinput.conf
 
+# light -A 10
+# light -U 10
 - name: allow non-root users change screen brightness
   file:
     path: /sys/class/backlight/intel_backlight/brightness
     mode: "0666"
-
-#- name: check installed i3-gnome revision
-#  vars:
-#    src: /usr/local/src/i3-gnome
-#  shell:
-#    cmd: "cat {{ src }}/installed-revision || true"
-#  register: installed_revision
-#
-#- name: build and install i3-gnome
-#  vars:
-#    revision: 3.36.0
-#    src: /usr/local/src/i3-gnome
-#  when: installed_revision.stdout.find(revision) == -1
-#  block:
-#    - git:
-#        repo: https://github.com/i3-gnome/i3-gnome.git
-#        dest: "{{ src }}/{{ revision }}"
-#        version: "{{ revision }}"

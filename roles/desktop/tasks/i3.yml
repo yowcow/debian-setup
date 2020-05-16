@@ -5,13 +5,17 @@
       - blueman
       - bluez
       - i3
+      - i3lock
       - i3-wm
       - light
+      - nitrogen
       - pasystray
       - rxvt-unicode
+      - xautolock
       - xinput
       - xsel
       - xserver-xorg-input-libinput
+      - xss-lock
 
 # xinput --list
 # xinput --list-props <device>

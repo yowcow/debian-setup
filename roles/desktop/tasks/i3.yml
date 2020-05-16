@@ -8,7 +8,9 @@
       - i3-wm
       - light
       - pasystray
+      - rxvt-unicode
       - xinput
+      - xsel
       - xserver-xorg-input-libinput
 
 # xinput --list

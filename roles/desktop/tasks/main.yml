@@ -10,6 +10,7 @@
       - fonts-noto-hinted
       - materia-gtk-theme
 
+- include: i3.yml
 - include: goph.yml
 - include: mozc.yml
 - include: sway.yml

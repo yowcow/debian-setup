@@ -4,6 +4,7 @@
     name:
       - i3
       - i3-wm
+      - light
       - xinput
       - xserver-xorg-input-libinput
 
@@ -14,6 +15,11 @@
   copy:
     src: 40-libinput.conf
     dest: /etc/X11/xorg.conf.d/40-libinput.conf
+
+- name: allow non-root users change screen brightness
+  file:
+    path: /sys/class/backlight/intel_backlight/brightness
+    mode: "0666"
 
 #- name: check installed i3-gnome revision
 #  vars:

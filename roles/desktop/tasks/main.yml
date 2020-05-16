@@ -10,6 +10,12 @@
       - fonts-noto-hinted
       - materia-gtk-theme
 
+- name: install flatpak firefox startup script
+  copy:
+    src: firefox.sh
+    dest: /usr/local/bin/firefox.sh
+    mode: "0755"
+
 - include: i3.yml
 - include: goph.yml
 - include: mozc.yml

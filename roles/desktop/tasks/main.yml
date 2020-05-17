@@ -4,10 +4,6 @@
     name:
       - firmware-linux-nonfree
       - flatpak
-      - fonts-firacode
-      - fonts-hack
-      - fonts-noto
-      - fonts-noto-hinted
       - materia-gtk-theme
 
 - name: install flatpak firefox startup script
@@ -17,6 +13,7 @@
     mode: "0755"
 
 - include: i3.yml
+- include: fonts.yml
 - include: goph.yml
 - include: mozc.yml
 - include: sway.yml

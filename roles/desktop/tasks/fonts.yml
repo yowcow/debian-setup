@@ -1,0 +1,14 @@
+---
+- name: uninstall font apt packages
+  apt:
+    name:
+      - fonts-vlgothic
+    state: absent
+
+- name: install font apt packages
+  apt:
+    name:
+      - fonts-firacode
+      - fonts-hack
+      - fonts-noto
+      - fonts-noto-hinted

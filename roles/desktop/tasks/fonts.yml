@@ -1,6 +1,7 @@
 ---
 # Fiding default fonts:
 #   * fonts for "sans": `fc-match sans`
+#   * fonts for "sans" in ja: `fc-match sans:lang=ja`
 #   * fonts for "DejaVu.ttf": `fc-match -a "DejaVu Sans" | less`
 
 - name: install font apt packages

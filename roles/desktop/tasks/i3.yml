@@ -24,10 +24,3 @@
   copy:
     src: 40-libinput.conf
     dest: /etc/X11/xorg.conf.d/40-libinput.conf
-
-# light -A 10
-# light -U 10
-- name: allow non-root users change screen brightness
-  file:
-    path: /sys/class/backlight/intel_backlight/brightness
-    mode: "0666"

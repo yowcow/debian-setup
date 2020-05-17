@@ -1,8 +1,11 @@
 ---
 release: testing
 
-developers:
-  - vagrant
+users:
+  - user: vagrant
+    groups:
+      - docker
+      - sudo
 
 ufw:
   default: allow

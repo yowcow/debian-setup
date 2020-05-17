@@ -1,7 +1,7 @@
 ---
 release: bullseye
 
-developers: []
+users: []
 
 ufw:
   default: reject

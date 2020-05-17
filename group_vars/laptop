@@ -1,8 +1,12 @@
 ---
 release: testing
 
-developers:
-  - yowcow
+users:
+  - user: yowcow
+    groups:
+      - docker
+      - sudo
+      - video
 
 ufw:
   default: reject

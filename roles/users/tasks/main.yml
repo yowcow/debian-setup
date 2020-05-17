@@ -29,10 +29,8 @@
     name: docker
     gid: 2002
 
-- name: add develoers to docker group
+- name: add users to groups
   user:
-    name: "{{ item }}"
-    groups:
-      - docker
-      - sudo
-  with_items: "{{ developers }}"
+    name: "{{ item.user }}"
+    groups: "{{ item.groups }}"
+  with_items: "{{ users }}"

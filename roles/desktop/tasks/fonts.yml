@@ -3,16 +3,17 @@
 #   * fonts for "sans": `fc-match sans`
 #   * fonts for "DejaVu.ttf": `fc-match -a "DejaVu Sans" | less`
 
-- name: uninstall font apt packages
-  apt:
-    name:
-      - fonts-vlgothic
-    state: absent
-
 - name: install font apt packages
   apt:
     name:
       - fonts-firacode
       - fonts-hack
+      - fonts-liberation
+      - fonts-liberation2
       - fonts-noto
       - fonts-noto-hinted
+
+- name: reject fonts
+  copy:
+    src: 70-rejected-fonts.conf
+    dest: /etc/fonts/conf.d/70-rejected-fonts.conf

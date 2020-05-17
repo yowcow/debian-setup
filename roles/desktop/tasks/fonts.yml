@@ -1,4 +1,8 @@
 ---
+# Fiding default fonts:
+#   * fonts for "sans": `fc-match sans`
+#   * fonts for "DejaVu.ttf": `fc-match -a "DejaVu Sans" | less`
+
 - name: uninstall font apt packages
   apt:
     name:

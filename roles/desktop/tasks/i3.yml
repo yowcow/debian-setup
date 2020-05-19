@@ -12,6 +12,7 @@
       - pasystray
       - ranger
       - rxvt-unicode
+      - x11-utils
       - xautolock
       - xinput
       - xsel
@@ -25,3 +26,14 @@
   copy:
     src: 40-libinput.conf
     dest: /etc/X11/xorg.conf.d/40-libinput.conf
+
+- name: install i3-py
+  pip:
+    name:
+      - i3-py
+    state: latest
+
+- name: fetch i3-alternate-layout
+  git:
+    repo: https://github.com/olemartinorg/i3-alternating-layout.git
+    dest: "/opt/i3-alternating-layout"

@@ -1,0 +1,33 @@
+---
+- name: install apt packages for st
+  apt:
+    name:
+      - libx11-dev
+      - libxft-dev
+      - x11proto-dev
+
+- name: check if st already installed
+  stat:
+    path: /usr/local/bin/st
+  register: stat_result
+
+- name: build and install st
+  when: not stat_result.stat.exists
+  vars:
+    src: /usr/local/src/st
+  block:
+    - git:
+        repo: https://git.suckless.org/st
+        dest: "{{ src }}"
+    - copy:
+        src: st-config.h
+        dest: "{{ src }}/config.h"
+    - make:
+        chdir: "{{ src }}"
+        target: clean
+    - make:
+        chdir: "{{ src }}"
+        target: all
+    - make:
+        chdir: "{{ src }}"
+        target: install

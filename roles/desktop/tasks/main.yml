@@ -9,4 +9,5 @@
 - include: fonts.yml
 - include: goph.yml
 - include: mozc.yml
+- include: st.yml
 - include: sway.yml

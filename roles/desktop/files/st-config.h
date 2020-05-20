@@ -97,7 +97,8 @@ static const char *colorname[] = {
     [1] = "#f92672", /* red     */
     [2] = "#a6e22e", /* green   */
     [3] = "#f4bf75", /* yellow  */
-    [4] = "#66d9ef", /* blue    */
+    //[4] = "#66d9ef", /* blue    */
+    [4] = "#1dc1e0", /* blue    */
     [5] = "#ae81ff", /* magenta */
     [6] = "#a1efe4", /* cyan    */
     [7] = "#f8f8f2", /* white   */
@@ -107,7 +108,8 @@ static const char *colorname[] = {
     [9]  = "#f92672", /* red     */
     [10] = "#a6e22e", /* green   */
     [11] = "#f4bf75", /* yellow  */
-    [12] = "#66d9ef", /* blue    */
+    //[12] = "#66d9ef", /* blue    */
+    [12] = "#1dc1e0", /* blue    */
     [13] = "#ae81ff", /* magenta */
     [14] = "#a1efe4", /* cyan    */
     [15] = "#f9f8f5", /* white   */
@@ -125,7 +127,7 @@ static const char *colorname[] = {
 unsigned int defaultfg = 257;
 unsigned int defaultbg = 256;
 static unsigned int defaultcs = 118;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultrcs = 233;
 
 /*
  * Default shape of cursor

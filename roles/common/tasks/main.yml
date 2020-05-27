@@ -59,6 +59,7 @@
 - include: mysql.yml
 - include: neovim.yml
 - include: nodejs.yml
+- include: psql.yml
 - include: travis.yml
 - include: sysstat.yml
 - include: universal-ctags.yml

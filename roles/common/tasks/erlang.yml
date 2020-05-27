@@ -12,7 +12,7 @@
 
 - name: build and install erlang
   vars:
-    revision: OTP-23.0
+    revision: OTP-23.0.1
     src: /usr/local/src/erlang
     prefix: /usr/local/erlang
   when: installed_revision.stdout.find(revision) == -1

@@ -5,9 +5,10 @@
       - firmware-linux-nonfree
       - materia-gtk-theme
 
-- include: i3.yml
+- include: alacritty.yml
 - include: fonts.yml
 - include: goph.yml
+- include: i3.yml
 - include: mozc.yml
 - include: st.yml
 - include: sway.yml

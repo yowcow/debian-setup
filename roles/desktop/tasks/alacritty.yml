@@ -17,7 +17,7 @@
 - name: build and install alacritty
   when: not stat_result.stat.exists
   vars:
-    revision: v0.4.2
+    revision: v0.4.3
     src: /opt/src/alacritty
     prefix: /opt/alacritty
   block:

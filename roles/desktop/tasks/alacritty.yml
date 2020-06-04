@@ -29,7 +29,7 @@
         chdir: "{{ src }}"
         cmd: cargo build --release
 
-- name: symlink st
+- name: symlink alacritty
   file:
     src: /opt/src/alacritty/target/release/alacritty
     dest: /usr/local/bin/alacritty

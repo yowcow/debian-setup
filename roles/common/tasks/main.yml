@@ -30,6 +30,7 @@
       - golang
       - htop
       - jq
+      - man
       - netbase
       - perl
       - perl-doc

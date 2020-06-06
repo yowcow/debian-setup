@@ -1,6 +1,6 @@
 HOST := $(shell hostname)
 
-ifeq ($(HOST),dev03-bco)
+ifeq ($(HOST),dev01-x28)
   GROUP := production
 else ifeq ($(HOST),debian-vagrant)
   GROUP := development

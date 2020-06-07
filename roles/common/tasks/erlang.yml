@@ -2,6 +2,7 @@
   apt:
     name:
       - erlang
+      - libssl-dev
 
 ## erlang
 - name: check installed erlang revision

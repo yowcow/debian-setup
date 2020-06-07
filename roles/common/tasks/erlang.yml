@@ -3,6 +3,7 @@
     name:
       - erlang
 
+## erlang
 - name: check installed erlang revision
   vars:
     src: /opt/src/erlang
@@ -43,8 +44,32 @@
         dest: "{{ src }}/installed-revision"
         content: "{{ revision }}"
 
-- name: fetch and install rebar3
-  get_url:
-    url: https://s3.amazonaws.com/rebar3/rebar3
-    dest: /opt/erlang/bin/rebar3
-    mode: "0755"
+## rebar3
+- name: check installed rebar3 revision
+  vars:
+    src: /opt/src/rebar3
+  shell:
+    cmd: "cat {{ src }}/installed-revision || true"
+  register: installed_revision
+
+- name: build and install rebar3
+  vars:
+    revision: 3.13.2
+    src: /opt/src/rebar3
+    erlang_prefix: /opt/erlang/bin
+  when: installed_revision.stdout.find(revision) == -1
+  block:
+    - git:
+        repo: https://github.com/erlang/rebar3.git
+        dest: "{{ src }}"
+        version: "{{ revision }}"
+    - shell:
+        chdir: "{{ src }}"
+        cmd: "PATH={{ erlang_prefix }}:$PATH ./bootstrap"
+    - copy:
+        dest: /usr/local/bin/rebar3
+        src: "{{ src }}/rebar3"
+        mode: "0755"
+    - copy:
+        dest: "{{ src }}/installed-revision"
+        content: "{{ revision }}"

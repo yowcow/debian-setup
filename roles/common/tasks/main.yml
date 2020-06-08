@@ -54,6 +54,7 @@
   apt:
     name:
       - libdb-dev
+      - libprotobuf-dev
 
 - include: erlang.yml
 - include: mysql.yml

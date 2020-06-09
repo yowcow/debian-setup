@@ -3,11 +3,11 @@
     name:
       - certbot
 
-- name: install certbot crontab
-  copy:
-    src: crontab/certbot
-    dest: /etc/cron.daily/certbot
-    mode: "0755"
+#- name: install certbot crontab
+#  copy:
+#    src: crontab/certbot
+#    dest: /etc/cron.daily/certbot
+#    mode: "0755"
 
 - name: install certbot logrotate
   copy:

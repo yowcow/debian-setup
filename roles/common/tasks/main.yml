@@ -54,13 +54,13 @@
   apt:
     name:
       - libdb-dev
-      - libprotobuf-dev
 
 - include: erlang.yml
 - include: mysql.yml
 - include: neovim.yml
 - include: nodejs.yml
 - include: perl.yml
+- include: protobuf.yml
 - include: psql.yml
 - include: rust.yml
 - include: travis.yml

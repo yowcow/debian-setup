@@ -8,7 +8,7 @@
     name: znc
     uid: 2001
     group: znc
-    shell: "/usr/bin/false"
+    shell: "/usr/bin/bash"
     home: "/home/znc"
 
 - name: add group www-user
@@ -21,7 +21,7 @@
     name: www-user
     uid: 1100
     group: www-user
-    shell: "/usr/bin/false"
+    shell: "/usr/bin/bash"
     home: "/home/www-user"
 
 - name: add group docker

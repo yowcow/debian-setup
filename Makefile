@@ -1,8 +1,8 @@
 HOST := $(shell hostname)
 
-ifeq ($(HOST),dev01-x28)
+ifeq ($(HOST),www-x28)
   GROUP := production
-else ifeq ($(HOST),debian-vagrant)
+else ifeq ($(HOST),dev-x28)
   GROUP := development
 else ifeq ($(HOST),debian-laptop)
   GROUP := laptop

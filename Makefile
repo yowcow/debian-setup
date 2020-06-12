@@ -11,8 +11,11 @@ endif
 ANSIBLE := ansible -i hosts.$(GROUP) -e 'ansible_python_interpreter=/usr/bin/python3'
 ANSIBLE_PLAYBOOK := ansible-playbook -i hosts.$(GROUP) -K -e 'ansible_python_interpreter=/usr/bin/python3' -l $(GROUP)
 
-all:
+all: /etc/apt/sources.list
 	$(ANSIBLE) $(GROUP) -m ping
+
+/etc/apt/sources.list: sources.list
+	cp $< $@
 
 ifneq ($(DRYRUN),)
 play: CHECK := --check

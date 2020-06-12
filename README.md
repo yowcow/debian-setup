@@ -7,21 +7,23 @@ Provision all of my Debian nodes.
 Nodes (Groups)
 --------------
 
-* debian-laptop
-* debian-vagrant
-* dev03-bco
+* alpha-x28
+* dev-x28
+* www-x28
 
 
 How To Run
 ----------
 
-    make all play
+Set up apt repositories:
 
-With group name:
+    make all
 
-    make play GROUP=production
+Play all roles for the group:
 
-Run one roles only:
+    make play
+
+Play one role only:
 
     sudo make play-role GROUP=production ROLE=nginx
 

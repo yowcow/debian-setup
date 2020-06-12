@@ -1,5 +1,0 @@
-- name: set up interface
-  copy:
-    src: enp0s8
-    dest: /etc/network/interface.d/enp0s8
-    mode: "0644"

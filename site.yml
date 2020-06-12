@@ -24,7 +24,6 @@
   roles:
     - docker
     - google-cloud
-    - networking
 
 - name: apply configuration to production
   hosts: production

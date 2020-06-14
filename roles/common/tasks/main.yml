@@ -8,7 +8,6 @@
 - name: install apt packages
   apt:
     name:
-      - apt-file
       - autoconf
       - automake
       - awscli

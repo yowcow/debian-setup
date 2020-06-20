@@ -10,5 +10,4 @@
 - include: goph.yml
 - include: i3.yml
 - include: mozc.yml
-- include: st.yml
 - include: sway.yml

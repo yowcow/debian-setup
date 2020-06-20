@@ -11,26 +11,22 @@
 
 - name: check if alacritty already built
   stat:
-    path: /opt/src/alacritty/target/release/alacritty
+    path: "{{ alacritty.src }}/target/release/alacritty"
   register: stat_result
 
 - name: build and install alacritty
   when: not stat_result.stat.exists
-  vars:
-    revision: v0.4.3
-    src: /opt/src/alacritty
-    prefix: /opt/alacritty
   block:
     - git:
         repo: https://github.com/alacritty/alacritty.git
-        dest: "{{ src }}"
-        version: "{{ revision }}"
+        dest: "{{ alacritty.src }}"
+        version: "{{ alacritty.revision }}"
     - shell:
-        chdir: "{{ src }}"
+        chdir: "{{ alacritty.src }}"
         cmd: cargo build --release
 
 - name: symlink alacritty
   file:
-    src: /opt/src/alacritty/target/release/alacritty
+    src: "{{ alacritty.src }}/target/release/alacritty"
     dest: /usr/local/bin/alacritty
     state: link

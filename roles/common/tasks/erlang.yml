@@ -6,71 +6,59 @@
 
 ## erlang
 - name: check installed erlang revision
-  vars:
-    src: /opt/src/erlang
   shell:
-    cmd: "cat {{ src }}/installed-revision || true"
+    cmd: "cat {{ erlang.src }}/installed-revision || true"
   register: installed_revision
 
 - name: build and install erlang
-  vars:
-    revision: OTP-23.0.2
-    src: /opt/src/erlang
-    prefix: /opt/erlang
-  when: installed_revision.stdout.find(revision) == -1
+  when: installed_revision.stdout.find(erlang.revision) == -1
   block:
     - git:
         repo: https://github.com/erlang/OTP.git
-        dest: "{{ src }}"
-        version: "{{ revision }}"
+        dest: "{{ erlang.src }}"
+        version: "{{ erlang.revision }}"
     - shell:
-        chdir: "{{ src }}"
+        chdir: "{{ erlang.src }}"
         cmd: ./otp_build autoconf
     - shell:
-        chdir: "{{ src }}"
-        cmd: "./configure --prefix={{ prefix }}"
+        chdir: "{{ erlang.src }}"
+        cmd: "./configure --prefix={{ erlang.prefix }}"
     - make:
-        chdir: "{{ src }}"
+        chdir: "{{ erlang.src }}"
         target: clean
     - make:
-        chdir: "{{ src }}"
+        chdir: "{{ erlang.src }}"
         target: all
     - file:
-        path: "{{ prefix }}"
+        path: "{{ erlang.prefix }}"
         state: absent
     - make:
-        chdir: "{{ src }}"
+        chdir: "{{ erlang.src }}"
         target: install
     - copy:
-        dest: "{{ src }}/installed-revision"
-        content: "{{ revision }}"
+        dest: "{{ erlang.src }}/installed-revision"
+        content: "{{ erlang.revision }}"
 
 ## rebar3
 - name: check installed rebar3 revision
-  vars:
-    src: /opt/src/rebar3
   shell:
-    cmd: "cat {{ src }}/installed-revision || true"
+    cmd: "cat {{ rebar3.src }}/installed-revision || true"
   register: installed_revision
 
 - name: build and install rebar3
-  vars:
-    revision: 3.13.2
-    src: /opt/src/rebar3
-    erlang_prefix: /opt/erlang/bin
-  when: installed_revision.stdout.find(revision) == -1
+  when: installed_revision.stdout.find(rebar3.revision) == -1
   block:
     - git:
         repo: https://github.com/erlang/rebar3.git
-        dest: "{{ src }}"
-        version: "{{ revision }}"
+        dest: "{{ rebar3.src }}"
+        version: "{{ rebar3.revision }}"
     - shell:
-        chdir: "{{ src }}"
-        cmd: "PATH={{ erlang_prefix }}:$PATH ./bootstrap"
+        chdir: "{{ rebar3.src }}"
+        cmd: "PATH={{ erlang.prefix }}:$PATH ./bootstrap"
     - copy:
         dest: /usr/local/bin/rebar3
-        src: "{{ src }}/rebar3"
+        src: "{{ rebar3.src }}/rebar3"
         mode: "0755"
     - copy:
-        dest: "{{ src }}/installed-revision"
-        content: "{{ revision }}"
+        dest: "{{ rebar3.src }}/installed-revision"
+        content: "{{ rebar3.revision }}"

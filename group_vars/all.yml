@@ -1,0 +1,14 @@
+---
+erlang:
+  revision: OTP-23.0.2
+  src: /opt/src/erlang
+  prefix: /opt/erlang
+
+rebar3:
+  revision: 3.13.2
+  src: /opt/src/rebar3
+
+alacritty:
+  revision: v0.4.3
+  src: /opt/src/alacritty
+  prefix: /opt/alacritty

@@ -39,6 +39,9 @@
       - rsync
       - ruby
       - ruby-dev
+      - sqlite3
+      - sqlite3-doc
+      - sqlite3-pcre
       - tmux
       - traceroute
       - tree

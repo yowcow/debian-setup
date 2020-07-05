@@ -1,6 +1,9 @@
 ---
 release: testing
 
+apt:
+  mirror: deb.debian.org/debian/
+
 users:
   - user: vagrant
     groups:

@@ -1,6 +1,9 @@
 ---
 release: bullseye
 
+apt:
+  mirror: mirrors.digitalocean.com/debian/
+
 users: []
 
 ufw:

@@ -27,6 +27,7 @@
       - gawk
       - git
       - golang
+      - gpg
       - htop
       - jq
       - man

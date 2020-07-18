@@ -30,6 +30,8 @@
       - gpg
       - htop
       - jq
+      - links
+      - lynx
       - man
       - netbase
       - php-cli

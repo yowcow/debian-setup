@@ -1,6 +1,6 @@
 ---
 erlang:
-  revision: OTP-23.0.2
+  revision: OTP-23.0.3
   src: /opt/src/erlang
   prefix: /opt/erlang
 

@@ -42,7 +42,7 @@
 ## rebar3
 - name: check installed rebar3 revision
   shell:
-    cmd: "cat {{ rebar3.src }}/installed-revision || true"
+    cmd: "((rebar3 --version | awk '{ print $2 }') || true) 2>/dev/null"
   register: installed_revision
 
 - name: build and install rebar3
@@ -59,6 +59,3 @@
         dest: /usr/local/bin/rebar3
         src: "{{ rebar3.src }}/rebar3"
         mode: "0755"
-    - copy:
-        dest: "{{ rebar3.src }}/installed-revision"
-        content: "{{ rebar3.revision }}"

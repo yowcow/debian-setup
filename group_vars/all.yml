@@ -9,6 +9,6 @@ rebar3:
   src: /opt/src/rebar3
 
 alacritty:
-  revision: v0.4.3
+  revision: 0.5.0
   src: /opt/src/alacritty
   prefix: /opt/alacritty

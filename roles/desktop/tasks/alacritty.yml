@@ -9,24 +9,22 @@
       - pkg-config
       - python3
 
-- name: check if alacritty already built
-  stat:
-    path: "{{ alacritty.src }}/target/release/alacritty"
-  register: stat_result
+- name: check installed alacritty revision
+  shell:
+    cmd: "((alacritty --version | awk '{ print $2 }') || true) 2>/dev/null"
+  register: installed_revision
 
 - name: build and install alacritty
-  when: not stat_result.stat.exists
+  when: installed_revision.stdout.find(alacritty.revision) == -1
   block:
     - git:
         repo: https://github.com/alacritty/alacritty.git
         dest: "{{ alacritty.src }}"
-        version: "{{ alacritty.revision }}"
+        version: "v{{ alacritty.revision }}"
     - shell:
         chdir: "{{ alacritty.src }}"
         cmd: cargo build --release
-
-- name: symlink alacritty
-  file:
-    src: "{{ alacritty.src }}/target/release/alacritty"
-    dest: /usr/local/bin/alacritty
-    state: link
+    - copy:
+        dest: /usr/local/bin/alacritty
+        src: "{{ alacritty.src }}//target/release/alacritty"
+        mode: "0755"

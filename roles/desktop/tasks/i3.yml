@@ -27,10 +27,11 @@
     src: 40-libinput.conf
     dest: /etc/X11/xorg.conf.d/40-libinput.conf
 
-- name: install i3-py
+- name: install pip3 packages for i3
   pip:
     name:
-      - i3-py
+      - i3ipc
+    executable: pip3
     state: latest
 
 - name: fetch i3-alternate-layout

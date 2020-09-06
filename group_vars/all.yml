@@ -13,6 +13,10 @@ rebar3:
   revision: 3.13.2
   src: /opt/src/rebar3
 
+shotcut:
+  revision: 20.07.11
+  prefix: /opt/shotcut
+
 zig:
   revision: 0.6.0
   src: /opt/src/zig

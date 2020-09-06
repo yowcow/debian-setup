@@ -10,4 +10,5 @@
 - include: goph.yml
 - include: i3.yml
 - include: mozc.yml
+- include: shotcut.yml
 - include: sway.yml

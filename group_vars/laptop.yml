@@ -12,5 +12,6 @@ users:
       - video
 
 ufw:
-  default: reject
+  default: deny
+  logging: low
   rules: []

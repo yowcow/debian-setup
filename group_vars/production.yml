@@ -8,6 +8,7 @@ users: []
 
 ufw:
   default: reject
+  logging: low
   rules:
     - to_port: 22
       rule: allow

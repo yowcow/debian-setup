@@ -5,8 +5,9 @@
 
 - name: enable UFW with default policy
   ufw:
-    state: enabled
     default: "{{ ufw.default }}"
+    logging: "{{ ufw.logging }}"
+    state: enabled
 
 - name: apply UFW rules
   with_items: "{{ ufw.rules }}"

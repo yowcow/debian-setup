@@ -12,6 +12,7 @@ users:
 
 ufw:
   default: allow
+  logging: low
   rules:
     - to_port: 22
       rule: allow

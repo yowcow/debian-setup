@@ -2,6 +2,7 @@
 - name: install apt packages for desktop
   apt:
     name:
+      - bluez
       - firmware-linux-nonfree
       - materia-gtk-theme
 

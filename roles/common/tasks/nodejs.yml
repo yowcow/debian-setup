@@ -4,7 +4,6 @@
       - node-typescript
       - nodejs
       - npm
-      - npm-check-updates
       - yarnpkg
 
 - name: symlink yarn to yarnpkg

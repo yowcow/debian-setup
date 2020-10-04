@@ -5,7 +5,7 @@ alacritty:
   prefix: /opt/alacritty
 
 erlang:
-  revision: OTP-23.0.4
+  revision: OTP-23.1.1
   src: /opt/src/erlang
   prefix: /opt/erlang
 

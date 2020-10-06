@@ -10,7 +10,7 @@ erlang:
   prefix: /opt/erlang
 
 rebar3:
-  revision: 3.13.2
+  revision: 3.14.1
   src: /opt/src/rebar3
 
 shotcut:

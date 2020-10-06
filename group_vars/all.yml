@@ -18,6 +18,6 @@ shotcut:
   prefix: /opt/shotcut
 
 zig:
-  revision: 0.6.0+58ee5f4e6
+  revision: 0.6.0+dbc11be03
   src: /opt/src/zig
   prefix: /opt/zig

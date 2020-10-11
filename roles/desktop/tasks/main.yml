@@ -7,6 +7,7 @@
       - materia-gtk-theme
 
 - include: alacritty.yml
+- include: chrysalis.yml
 - include: fonts.yml
 - include: goph.yml
 - include: i3.yml

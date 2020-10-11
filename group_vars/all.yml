@@ -9,6 +9,10 @@ erlang:
   src: /opt/src/erlang
   prefix: /opt/erlang
 
+chrysalis:
+  revision: 0.7.9
+  prefix : /opt/chrysalis
+
 rebar3:
   revision: 3.14.1
   src: /opt/src/rebar3

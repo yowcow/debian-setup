@@ -5,6 +5,8 @@
       - bluez
       - firmware-linux-nonfree
       - materia-gtk-theme
+      - wine
+      - winetricks
 
 - include: alacritty.yml
 - include: chrysalis.yml

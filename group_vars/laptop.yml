@@ -1,5 +1,5 @@
 ---
-release: testing
+release: bullseye
 
 apt:
   mirror: deb.debian.org/debian/

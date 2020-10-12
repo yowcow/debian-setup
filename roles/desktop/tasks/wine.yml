@@ -1,0 +1,7 @@
+- name: install apt packages for wine
+  apt:
+    name:
+      - playonlinux
+      - wine
+      - wine32
+      - winetricks

@@ -38,3 +38,8 @@
   git:
     repo: https://github.com/olemartinorg/i3-alternating-layout.git
     dest: "/opt/i3-alternating-layout"
+
+- name: fetch i3ipc-python
+  git:
+    repo: https://github.com/altdesktop/i3ipc-python.git
+    dest: "/opt/i3ipc-python"

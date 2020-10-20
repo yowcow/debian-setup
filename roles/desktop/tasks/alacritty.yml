@@ -11,7 +11,7 @@
 
 - name: check installed alacritty revision
   shell:
-    cmd: "((alacritty --version | awk '{ print $2 }') || true) 2>/dev/null"
+    cmd: "(alacritty --version || true) 2>/dev/null"
   register: installed_revision
 
 - name: build and install alacritty

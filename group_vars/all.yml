@@ -4,14 +4,17 @@ alacritty:
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
+chrysalis:
+  revision: 0.7.9
+  prefix : /opt/chrysalis
+
+docker_compose:
+  revision: 1.27.4
+
 erlang:
   revision: OTP-23.1.1
   src: /opt/src/erlang
   prefix: /opt/erlang
-
-chrysalis:
-  revision: 0.7.9
-  prefix : /opt/chrysalis
 
 rebar3:
   revision: 3.14.1

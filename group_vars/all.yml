@@ -1,29 +1,41 @@
 ---
+# https://github.com/alacritty/alacritty/releases
 alacritty:
   revision: 0.5.0
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
+# https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
+awscli:
+  revision: 2.0.52
+  src: /opt/src/awscli
+
+# https://github.com/keyboardio/Chrysalis/releases
 chrysalis:
   revision: 0.7.9
   prefix : /opt/chrysalis
 
+# https://github.com/docker/compose/releases
 docker_compose:
   revision: 1.27.4
 
+# https://github.com/erlang/otp/releases
 erlang:
   revision: OTP-23.1.1
   src: /opt/src/erlang
   prefix: /opt/erlang
 
+# https://github.com/erlang/rebar3/releases
 rebar3:
   revision: 3.14.1
   src: /opt/src/rebar3
 
+# https://github.com/mltframework/shotcut/releases
 shotcut:
   revision: 20.09.27
   prefix: /opt/shotcut
 
+# https://ziglang.org/download/
 zig:
   revision: 0.6.0+53c63bdb7
   src: /opt/src/zig

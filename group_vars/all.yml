@@ -37,6 +37,6 @@ shotcut:
 
 # https://ziglang.org/download/
 zig:
-  revision: 0.6.0+53c63bdb7
+  revision: 0.6.0+0088efc4b
   src: /opt/src/zig
   prefix: /opt/zig

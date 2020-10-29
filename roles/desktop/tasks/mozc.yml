@@ -1,10 +1,10 @@
 ---
-- name: install fcitx apt packages
+- name: install fcitx packages
   apt:
     name:
       - fcitx-mozc
 
-- name: remove ibus apt packages
+- name: remove ibus packages
   apt:
     name:
       - ibus

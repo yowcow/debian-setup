@@ -1,4 +1,4 @@
-- name: install apt packages for perl
+- name: install packages for perl
   apt:
     name:
       - carton

@@ -1,5 +1,5 @@
 ---
-- name: install apt packages for goph
+- name: install packages for goph
   apt:
     name:
       - dconf-cli

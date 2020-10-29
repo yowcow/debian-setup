@@ -1,4 +1,4 @@
-- name: install apt packages for shotcut
+- name: install packages for shotcut
   apt:
     name:
       #- libjack0

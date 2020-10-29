@@ -1,5 +1,5 @@
 ---
-- name: install apt packages for i3
+- name: install packages for i3
   apt:
     name:
       - blueman

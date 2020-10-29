@@ -1,4 +1,4 @@
-- name: install apt packages for sysstat
+- name: install packages for sysstat
   apt:
     name:
       - sysstat

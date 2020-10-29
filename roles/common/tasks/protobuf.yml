@@ -1,4 +1,4 @@
-- name: install apt packages for protobuf
+- name: install packages for protobuf
   apt:
     name:
       - libprotobuf-dev

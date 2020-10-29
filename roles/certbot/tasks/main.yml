@@ -1,4 +1,4 @@
-- name: install apt packages for certbot
+- name: install packages for certbot
   apt:
     name:
       - certbot

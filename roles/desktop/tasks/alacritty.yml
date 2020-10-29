@@ -1,5 +1,5 @@
 ---
-- name: install apt packages for alacritty
+- name: install packages for alacritty
   apt:
     name:
       - cmake

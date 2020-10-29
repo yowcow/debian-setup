@@ -1,10 +1,16 @@
-- name: install apt packages for nodejs
+- name: install packages for nodejs
   apt:
     name:
       - node-typescript
       - nodejs
       - npm
       - yarnpkg
+
+- name: install packages for nodejs/puppeteer
+  apt:
+    name:
+      - libxss1
+      - libgdm1
 
 - name: symlink yarn to yarnpkg
   file:

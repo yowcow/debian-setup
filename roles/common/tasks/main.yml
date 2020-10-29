@@ -5,7 +5,7 @@
     state: link
     force: yes
 
-- name: install apt packages
+- name: install packages
   apt:
     name:
       - autoconf

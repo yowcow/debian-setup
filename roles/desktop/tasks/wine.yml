@@ -1,4 +1,4 @@
-- name: install apt packages for wine
+- name: install packages for wine
   apt:
     name:
       - wine

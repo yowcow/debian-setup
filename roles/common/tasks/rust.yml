@@ -1,4 +1,4 @@
-- name: install apt packages for rust
+- name: install packages for rust
   apt:
     name:
       - rustc

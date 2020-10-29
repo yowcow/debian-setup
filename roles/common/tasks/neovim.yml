@@ -1,4 +1,4 @@
-- name: install apt packages for neovim
+- name: install packages for neovim
   apt:
     name:
       - lua-nvim

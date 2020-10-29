@@ -1,4 +1,4 @@
-- name: install apt packages for travis
+- name: install packages for travis
   apt:
     name:
       - ruby-dev

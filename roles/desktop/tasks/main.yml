@@ -1,5 +1,5 @@
 ---
-- name: install apt packages for desktop
+- name: install packages for desktop
   apt:
     name:
       - bluez

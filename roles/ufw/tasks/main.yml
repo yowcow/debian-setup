@@ -1,4 +1,4 @@
-- name: install apt packages for ufw
+- name: install packages for ufw
   apt:
     name:
       - ufw

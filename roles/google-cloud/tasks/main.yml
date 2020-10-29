@@ -1,4 +1,4 @@
-- name: install apt packages for google-cloud-sdk
+- name: install packages for google-cloud-sdk
   apt:
     name:
       - apt-transport-https

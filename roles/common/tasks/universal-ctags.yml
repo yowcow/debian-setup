@@ -1,4 +1,4 @@
-- name: install apt packages for universal-ctags
+- name: install packages for universal-ctags
   apt:
     name:
       - gcc

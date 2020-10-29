@@ -1,5 +1,5 @@
 ---
-- name: install apt packages for sway
+- name: install packages for sway
   apt:
     name:
       - sway

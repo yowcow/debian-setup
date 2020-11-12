@@ -4,16 +4,9 @@
       - node-typescript
       - nodejs
       - npm
-      - yarnpkg
 
 - name: install packages for nodejs/puppeteer
   apt:
     name:
       - libxss1
       - libgdm1
-
-- name: symlink yarn to yarnpkg
-  file:
-    src: /usr/bin/yarnpkg
-    dest: /usr/bin/yarn
-    state: link

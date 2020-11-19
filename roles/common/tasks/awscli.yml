@@ -19,4 +19,4 @@
         dest: "{{ awscli.src }}/awscli-{{ awscli.revision }}"
     - shell:
         chdir: "{{ awscli.src }}/awscli-{{ awscli.revision }}"
-        cmd: "./aws/install"
+        cmd: "(which aws && ./aws/install --update) || ./aws/install"

@@ -6,6 +6,7 @@
   roles:
     - apt
     - common
+    - google-cloud
     - users
     - ufw
 
@@ -23,7 +24,6 @@
   gather_facts: no
   roles:
     - docker
-    - google-cloud
 
 - name: apply configuration to production
   hosts: production

@@ -6,7 +6,6 @@
   roles:
     - apt
     - common
-    - google-cloud
     - users
     - ufw
 

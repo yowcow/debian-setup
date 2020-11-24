@@ -62,6 +62,7 @@
 
 - include: awscli.yml
 - include: erlang.yml
+- include: google-cloud.yml
 - include: mysql.yml
 - include: neovim.yml
 - include: nodejs.yml

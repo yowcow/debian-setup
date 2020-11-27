@@ -59,6 +59,8 @@
   apt:
     name:
       - libdb-dev
+      - libxml2-dev
+      - libxml2-utils
 
 - include: awscli.yml
 - include: erlang.yml

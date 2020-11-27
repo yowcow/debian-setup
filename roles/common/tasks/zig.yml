@@ -3,8 +3,13 @@
     cmd: "(/opt/zig/zig version || true) 2>/dev/null"
   register: installed_revision
 
+- name: check the latest zig version
+  shell:
+    cmd: "curl -sSL https://ziglang.org/download/index.json | jq -r .master.version"
+  register: latest_revision
+
 - name: fetch and install zig
-  when: installed_revision.stdout.find(zig.revision) == -1
+  when: latest_revision.stdout.find(installed_revision.stdout) == -1
   block:
     - file:
         path: "{{ zig.src }}"
@@ -15,10 +20,10 @@
         state: directory
         mode: "0755"
     - get_url:
-        url: "https://ziglang.org/builds/zig-linux-x86_64-{{ zig.revision }}.tar.xz"
-        dest: "{{ zig.src }}/zig-{{ zig.revision }}.tar.xz"
+        url: "https://ziglang.org/builds/zig-linux-x86_64-{{ latest_revision.stdout }}.tar.xz"
+        dest: "{{ zig.src }}/zig-{{ latest_revision.stdout }}.tar.xz"
         mode: "0644"
     - unarchive:
-        src: "{{ zig.src }}/zig-{{ zig.revision }}.tar.xz"
+        src: "{{ zig.src }}/zig-{{ latest_revision.stdout }}.tar.xz"
         dest: "{{ zig.prefix }}"
         extra_opts: [--strip-components=1]

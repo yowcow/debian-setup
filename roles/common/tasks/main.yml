@@ -17,7 +17,6 @@
       - checkinstall
       - clang
       - cmake
-      - composer
       - cronolog
       - curl
       - finger
@@ -33,8 +32,6 @@
       - lynx
       - man
       - netbase
-      - php-cli
-      - php-xml
       - pkg-config
       - ripgrep
       - rsync
@@ -69,6 +66,7 @@
 - include: neovim.yml
 - include: nodejs.yml
 - include: perl.yml
+- include: php.yml
 - include: protobuf.yml
 - include: psql.yml
 - include: python.yml

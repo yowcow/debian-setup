@@ -20,6 +20,7 @@
     - python
     - rust
     - travis
+    - universal-ctags
     - ziglang
 
 - name: apply configuration to laptop

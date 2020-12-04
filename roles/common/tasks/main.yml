@@ -41,6 +41,7 @@
       - sqlite3
       - sqlite3-doc
       - sqlite3-pcre
+      - tmpreaper
       - tmux
       - traceroute
       - tree

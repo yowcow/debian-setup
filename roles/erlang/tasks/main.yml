@@ -38,4 +38,4 @@
         dest: "{{ erlang.src }}/installed-revision"
         content: "{{ erlang.revision }}"
 
-- include: erlang-rebar3.yml
+- include: rebar3.yml

@@ -61,7 +61,6 @@
       - libxml2-utils
 
 - include: mysql.yml
-- include: protobuf.yml
 - include: psql.yml
 - include: python.yml
 - include: rust.yml

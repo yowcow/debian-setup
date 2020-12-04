@@ -16,6 +16,7 @@
     - nodejs
     - perl
     - php
+    - protobuf
     - ziglang
 
 - name: apply configuration to laptop

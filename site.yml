@@ -17,6 +17,7 @@
     - perl
     - php
     - protobuf
+    - python
     - ziglang
 
 - name: apply configuration to laptop

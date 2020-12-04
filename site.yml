@@ -12,6 +12,7 @@
     - awscli
     - erlang
     - google-cloud
+    - neovim
     - ziglang
 
 - name: apply configuration to laptop

@@ -60,7 +60,6 @@
       - libxml2-dev
       - libxml2-utils
 
-- include: awscli.yml
 - include: erlang.yml
 - include: google-cloud.yml
 - include: mysql.yml

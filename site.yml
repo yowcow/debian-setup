@@ -8,6 +8,8 @@
     - common
     - users
     - ufw
+    ## tasks
+    - awscli
     - ziglang
 
 - name: apply configuration to laptop

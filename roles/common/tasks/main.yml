@@ -75,4 +75,3 @@
 - include: travis.yml
 - include: sysstat.yml
 - include: universal-ctags.yml
-- include: zig.yml

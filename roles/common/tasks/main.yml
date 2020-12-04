@@ -61,7 +61,6 @@
       - libxml2-utils
 
 - include: mysql.yml
-- include: nodejs.yml
 - include: perl.yml
 - include: php.yml
 - include: protobuf.yml

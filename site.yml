@@ -15,6 +15,7 @@
     - neovim
     - nodejs
     - perl
+    - php
     - ziglang
 
 - name: apply configuration to laptop

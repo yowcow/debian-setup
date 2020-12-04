@@ -11,6 +11,7 @@
     ## tasks
     - awscli
     - erlang
+    - google-cloud
     - ziglang
 
 - name: apply configuration to laptop

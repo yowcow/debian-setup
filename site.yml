@@ -19,6 +19,7 @@
     - protobuf
     - python
     - rust
+    - travis
     - ziglang
 
 - name: apply configuration to laptop

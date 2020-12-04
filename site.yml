@@ -10,6 +10,7 @@
     - ufw
     ## tasks
     - awscli
+    - erlang
     - ziglang
 
 - name: apply configuration to laptop

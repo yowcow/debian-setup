@@ -62,7 +62,6 @@
 
 - include: mysql.yml
 - include: psql.yml
-- include: rust.yml
 - include: travis.yml
 - include: sysstat.yml
 - include: universal-ctags.yml

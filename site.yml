@@ -18,6 +18,7 @@
     - php
     - protobuf
     - python
+    - rust
     - ziglang
 
 - name: apply configuration to laptop

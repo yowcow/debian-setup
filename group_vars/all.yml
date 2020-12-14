@@ -1,13 +1,13 @@
 ---
 # https://github.com/alacritty/alacritty/releases
 alacritty:
-  revision: 0.5.0
+  revision: 0.6.0
   src: /opt/src/alacritty
   prefix: /opt/alacritty
 
 # https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
 awscli:
-  revision: 2.1.2
+  revision: 2.1.10
   src: /opt/src/awscli
 
 # https://github.com/keyboardio/Chrysalis/releases
@@ -21,13 +21,13 @@ docker_compose:
 
 # https://github.com/erlang/otp/releases
 erlang:
-  revision: OTP-23.1.4
+  revision: OTP-23.1.5
   src: /opt/src/erlang
   prefix: /opt/erlang
 
 # https://github.com/erlang/rebar3/releases
 rebar3:
-  revision: 3.14.2
+  revision: 3.14.3
   src: /opt/src/rebar3
 
 # https://github.com/mltframework/shotcut/releases
